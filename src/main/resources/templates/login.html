@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>New Person</title>
+    <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<h1>New Person</h1>
-<form th:action="@{/person}" method="post">
+<h1>Login</h1>
+<form th:action="@{/login}" method="post">
     <table>
         <tr>
-            <td>First Name:</td>
-            <td><input type="text" name="firstName"/></td>
+            <td>Username:</td>
+            <td><input type="text" name="username"/></td>
         </tr>
         <tr>
-            <td>Last Name:</td>
-            <td><input type="text" name="lastName"/></td>
+            <td>Password:</td>
+            <td><input type="password" name="password"/></td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" value="Submit"/>&nbsp;&nbsp;
+                <input type="submit" value="Login"/>&nbsp;&nbsp;
                 <input type="reset" value="Reset"/></td>
         </tr>
     </table>

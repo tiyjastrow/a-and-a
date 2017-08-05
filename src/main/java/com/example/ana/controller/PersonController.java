@@ -44,4 +44,9 @@ public class PersonController {
         model.addAttribute("message", exception.getMessage());
         return "error_message";
     }
+
+    @GetMapping("/login")
+    String login() {
+        return "login";
+    }
 }
