@@ -1,0 +1,40 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/persondb
+    username: personuser
+    password: personpass
+
+facebook:
+  client:
+    clientId: 307351016374808
+    clientSecret: 03731a9f55fccfb676bcd51b1003b74b
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+
+github:
+  client:
+    clientId: f16e9e7f448bc4832bdf
+    clientSecret: da267255b1a03bccf52c91c6d667419e3624ca0e
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+google:
+  client:
+    clientId: 1047220931894-3meo845jqf33frv7nsjeridrste3tp6h.apps.googleusercontent.com
+    clientSecret:  NeHhb5lL9EfMaIuFupnl1DJw
+    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope: email
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+
