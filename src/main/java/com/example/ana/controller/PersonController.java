@@ -49,4 +49,18 @@ public class PersonController {
     String login() {
         return "login";
     }
+
+    @RequestMapping("/loggedout")
+    String logout(Model model) {
+        List<Person> persons = personService.getAll();
+        model.addAttribute("listOPeople", persons);
+        return "view_people";
+    }
+
+    @GetMapping("/admins-only")
+    String admins() {
+        return "administration";
+    }
+
+
 }
