@@ -65,7 +65,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UserInfoTokenServices tokenServices = new UserInfoTokenServices(facebookResource().getUserInfoUri(), facebook().getClientId());
         tokenServices.setRestTemplate(facebookTemplate);
         facebookFilter.setTokenServices(tokenServices);
-//        facebookFilter.setAuthenticationSuccessHandler(authenticationSuccess);
         filters.add(facebookFilter);
 
         // Github
@@ -75,7 +74,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         tokenServices = new UserInfoTokenServices(githubResource().getUserInfoUri(), github().getClientId());
         tokenServices.setRestTemplate(githubTemplate);
         githubFilter.setTokenServices(tokenServices);
-//        githubFilter.setAuthenticationSuccessHandler(authenticationSuccess);
         filters.add(githubFilter);
 
         // Google
@@ -85,7 +83,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         tokenServices = new UserInfoTokenServices(googleResource().getUserInfoUri(), google().getClientId());
         tokenServices.setRestTemplate(googleTemplate);
         googleFilter.setTokenServices(tokenServices);
-//        googleFilter.setAuthenticationSuccessHandler(authenticationSuccess);
         filters.add(googleFilter);
 
         filter.setFilters(filters);
